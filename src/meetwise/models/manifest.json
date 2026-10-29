@@ -1,85 +1,162 @@
 {
  "schema": 1,
- "note": "Downloaded models. Every file is pinned to an upstream commit and sha256. scripts/fetch_models.py downloads and verifies; meetwise.model_pack reads. The Linux runtime set (CTranslate2 whisper, GGUF summary model) is added with the Linux providers.",
+ "note": "Downloaded models. Every file is pinned to an upstream commit and sha256. scripts/fetch_models.py downloads and verifies; meetwise.model_pack reads. Whisper models are CTranslate2 conversions for faster-whisper; the summary model is a GGUF for llama.cpp.",
  "models": [
   {
-   "name": "thonburian-whisper-th-medium",
+   "name": "whisper-large-v3-turbo-ct2",
+   "role": "asr",
+   "languages": [
+    "th",
+    "en",
+    "sv",
+    "hi",
+    "pa"
+   ],
+   "stage": "7 ASR (fallback, en)",
+   "repo": "deepdml/faster-whisper-large-v3-turbo-ct2",
+   "license": "MIT",
+   "attribution": "Whisper large-v3 turbo, OpenAI; CTranslate2 conversion by deepdml",
+   "source": "huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2",
+   "revision": "4df90f75321148c3a29a9e2351b7ddf8f5b115a8",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 2263,
+     "sha256": "b0253ea6c0d3bea6b1e19e91a02acfd3b53f4467362efcb5a3e6b16c9b3a9b7e",
+     "url": "https://huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2/resolve/4df90f75321148c3a29a9e2351b7ddf8f5b115a8/config.json"
+    },
+    {
+     "path": "preprocessor_config.json",
+     "size": 340,
+     "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+     "url": "https://huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2/resolve/4df90f75321148c3a29a9e2351b7ddf8f5b115a8/preprocessor_config.json"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 2710337,
+     "sha256": "297b13372ac43916285644fb9687add3cc62ee2a1adb60da3dc25cc94c1871fd",
+     "url": "https://huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2/resolve/4df90f75321148c3a29a9e2351b7ddf8f5b115a8/tokenizer.json"
+    },
+    {
+     "path": "vocabulary.json",
+     "size": 1068114,
+     "sha256": "c69260f2ab26d659b7c398f9a2b2b48ed0df16c3b47d7326782fd9cba71690c1",
+     "url": "https://huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2/resolve/4df90f75321148c3a29a9e2351b7ddf8f5b115a8/vocabulary.json"
+    },
+    {
+     "path": "model.bin",
+     "size": 1617884929,
+     "sha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+     "url": "https://huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2/resolve/4df90f75321148c3a29a9e2351b7ddf8f5b115a8/model.bin"
+    }
+   ]
+  },
+  {
+   "name": "thonburian-whisper-th-medium-ct2",
    "role": "asr",
    "languages": [
     "th"
    ],
-   "stage": "7 ASR",
-   "repo": "biodatlab/whisper-th-medium-combined",
+   "stage": "7 ASR th",
+   "repo": "kerlos127/whisper-th-medium-combined-ct2",
    "license": "Apache-2.0",
-   "attribution": "Thonburian Whisper, biodatlab (Mahidol University)",
-   "source": "huggingface.co/biodatlab/whisper-th-medium-combined",
-   "revision": "eebf84255cc7f242a504f64ec09ec33d32903fe1",
+   "attribution": "Thonburian Whisper, biodatlab (Mahidol University); CTranslate2 conversion by kerlos127",
+   "source": "huggingface.co/kerlos127/whisper-th-medium-combined-ct2",
+   "revision": "0778ec3d6d8ce8a023e4dbd3e6808d5a8bdf3a1f",
    "files": [
     {
      "path": "config.json",
-     "size": 1292,
-     "sha256": "b74e5b83343f8e14c2f9010b00263d6300c3550c0c880a412b66ffe5da6b49c5",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/config.json"
-    },
-    {
-     "path": "generation_config.json",
-     "size": 3750,
-     "sha256": "9ba91a67d4a86e2fe9e0965eb173a17822bb0bfbaf35e87567d509a39b3db2a7",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/generation_config.json"
+     "size": 2257,
+     "sha256": "3622a2ddc41ec0e0fd4e68c13c6830f03b90c38d89aaad184de02c8c642cf807",
+     "url": "https://huggingface.co/kerlos127/whisper-th-medium-combined-ct2/resolve/0778ec3d6d8ce8a023e4dbd3e6808d5a8bdf3a1f/config.json"
     },
     {
      "path": "preprocessor_config.json",
      "size": 339,
      "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/preprocessor_config.json"
-    },
-    {
-     "path": "added_tokens.json",
-     "size": 34604,
-     "sha256": "9715fd2243b6f06a5858b5e32950d2853f73dd5bc201aafcf76f5082a2d8acd1",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/added_tokens.json"
-    },
-    {
-     "path": "special_tokens_map.json",
-     "size": 2194,
-     "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/special_tokens_map.json"
+     "url": "https://huggingface.co/kerlos127/whisper-th-medium-combined-ct2/resolve/0778ec3d6d8ce8a023e4dbd3e6808d5a8bdf3a1f/preprocessor_config.json"
     },
     {
      "path": "tokenizer.json",
      "size": 2481188,
      "sha256": "a10d05b346bd872cbbdcb276355105de0787334deafa2c93c68d8d22c4d84bbf",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/tokenizer.json"
+     "url": "https://huggingface.co/kerlos127/whisper-th-medium-combined-ct2/resolve/0778ec3d6d8ce8a023e4dbd3e6808d5a8bdf3a1f/tokenizer.json"
     },
     {
-     "path": "tokenizer_config.json",
-     "size": 282683,
-     "sha256": "2a4c4281cf9f51ac6ccc406fdc711a087afe6530f671fa7b80953edc498275ce",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/tokenizer_config.json"
+     "path": "vocabulary.json",
+     "size": 1068103,
+     "sha256": "5ad28279db5e546349708b9a74736e2c018737ac5a600f1048f1f26c99b85b47",
+     "url": "https://huggingface.co/kerlos127/whisper-th-medium-combined-ct2/resolve/0778ec3d6d8ce8a023e4dbd3e6808d5a8bdf3a1f/vocabulary.json"
     },
     {
-     "path": "vocab.json",
-     "size": 835550,
-     "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/vocab.json"
+     "path": "model.bin",
+     "size": 1527906453,
+     "sha256": "27577575a4608196c7cd756a40a26753d297c0aa60ef50deb573ed0f9ab002ea",
+     "url": "https://huggingface.co/kerlos127/whisper-th-medium-combined-ct2/resolve/0778ec3d6d8ce8a023e4dbd3e6808d5a8bdf3a1f/model.bin"
+    }
+   ]
+  },
+  {
+   "name": "kb-whisper-large-sv-ct2",
+   "role": "asr",
+   "languages": [
+    "sv"
+   ],
+   "stage": "7 ASR sv",
+   "repo": "KBLab/kb-whisper-large",
+   "license": "Apache-2.0",
+   "attribution": "KB-Whisper, KBLab (National Library of Sweden)",
+   "source": "huggingface.co/KBLab/kb-whisper-large",
+   "revision": "d5d5984b4d8f7c4847a8ea203f1976285fb28300",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 3717,
+     "sha256": "48be972f94e790720e32b8711ad54860b1d06d5434079d3fcdfdfe1254d29c69",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/config.json"
     },
     {
-     "path": "merges.txt",
-     "size": 493864,
-     "sha256": "78f27f801feb4283ae969d4cadacb28fc051b655647402b1a252c7079ea11c46",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/merges.txt"
+     "path": "preprocessor_config.json",
+     "size": 340,
+     "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/preprocessor_config.json"
     },
     {
-     "path": "normalizer.json",
-     "size": 52666,
-     "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/normalizer.json"
+     "path": "tokenizer.json",
+     "size": 3931383,
+     "sha256": "d06d0c877b5143ccdcb761407d5650b18a6afc33f9261fcb7e0dd44acbc1c262",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/tokenizer.json"
     },
     {
-     "path": "model.safetensors",
-     "size": 1634047376,
-     "sha256": "c683cd8930c6620212a5e6b03f17adbf52adf66d5cd1268f0dcbe468980e97b1",
-     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/model.safetensors"
+     "path": "vocabulary.json",
+     "size": 1068114,
+     "sha256": "c69260f2ab26d659b7c398f9a2b2b48ed0df16c3b47d7326782fd9cba71690c1",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/vocabulary.json"
+    },
+    {
+     "path": "model.bin",
+     "size": 3087284276,
+     "sha256": "69ed56887f68417f651d50fd5f225c60dfc0f9515bef85bb0f1404825c6f01de",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/model.bin"
+    }
+   ]
+  },
+  {
+   "name": "qwen3-8b-q4km-gguf",
+   "role": "llm",
+   "languages": [],
+   "stage": "9-10 glossary, summary",
+   "repo": "Qwen/Qwen3-8B-GGUF",
+   "license": "Apache-2.0",
+   "attribution": "Qwen3-8B, Alibaba Qwen team",
+   "source": "huggingface.co/Qwen/Qwen3-8B-GGUF",
+   "revision": "7c41481f57cb95916b40956ab2f0b139b296d974",
+   "files": [
+    {
+     "path": "Qwen3-8B-Q4_K_M.gguf",
+     "size": 5027783488,
+     "sha256": "d98cdcbd03e17ce47681435b5150e34c1417f50b5c0019dd560e4882c5745785",
+     "url": "https://huggingface.co/Qwen/Qwen3-8B-GGUF/resolve/7c41481f57cb95916b40956ab2f0b139b296d974/Qwen3-8B-Q4_K_M.gguf"
     }
    ]
   },
@@ -219,87 +296,6 @@
      "size": 762555,
      "sha256": "a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc",
      "url": "https://huggingface.co/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/classifier.ckpt"
-    }
-   ]
-  },
-  {
-   "name": "kb-whisper-large-sv",
-   "role": "asr",
-   "languages": [
-    "sv"
-   ],
-   "stage": "7 ASR sv",
-   "repo": "KBLab/kb-whisper-large",
-   "license": "Apache-2.0",
-   "attribution": "KB-Whisper, KBLab (National Library of Sweden)",
-   "source": "huggingface.co/KBLab/kb-whisper-large",
-   "revision": "d5d5984b4d8f7c4847a8ea203f1976285fb28300",
-   "files": [
-    {
-     "path": "config.json",
-     "size": 3717,
-     "sha256": "48be972f94e790720e32b8711ad54860b1d06d5434079d3fcdfdfe1254d29c69",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/config.json"
-    },
-    {
-     "path": "generation_config.json",
-     "size": 3849,
-     "sha256": "8cd1a9dbdf2fff6a1d538f289a1f9f322e50adc2f8a5b4b11586bfe097afb6f9",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/generation_config.json"
-    },
-    {
-     "path": "preprocessor_config.json",
-     "size": 340,
-     "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/preprocessor_config.json"
-    },
-    {
-     "path": "added_tokens.json",
-     "size": 34648,
-     "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/added_tokens.json"
-    },
-    {
-     "path": "special_tokens_map.json",
-     "size": 2186,
-     "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/special_tokens_map.json"
-    },
-    {
-     "path": "tokenizer.json",
-     "size": 3931383,
-     "sha256": "d06d0c877b5143ccdcb761407d5650b18a6afc33f9261fcb7e0dd44acbc1c262",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/tokenizer.json"
-    },
-    {
-     "path": "tokenizer_config.json",
-     "size": 282767,
-     "sha256": "a3df0b960492131e6f51c064a1c1d11ceab1c15e72aead1f6036e6cf9161b4d6",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/tokenizer_config.json"
-    },
-    {
-     "path": "vocab.json",
-     "size": 835528,
-     "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/vocab.json"
-    },
-    {
-     "path": "merges.txt",
-     "size": 493869,
-     "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/merges.txt"
-    },
-    {
-     "path": "normalizer.json",
-     "size": 52666,
-     "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/normalizer.json"
-    },
-    {
-     "path": "model.safetensors",
-     "size": 3219908024,
-     "sha256": "fa89eecf05f87f15cfd7213f9f55d6fdbbd1a59e6d152f58c4e87bcc482cde3f",
-     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/model.safetensors"
     }
    ]
   }

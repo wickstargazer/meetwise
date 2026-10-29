@@ -11,7 +11,7 @@ _THINK = re.compile(r"<think>.*?</think>", re.DOTALL)
 
 @runtime_checkable
 class LlmProvider(Protocol):
-    name: str  # "qwen3-8b-4bit-mlx", "bedrock-...", ...
+    name: str  # "qwen3-8b-q4km-gguf", ...
     locality: Literal["local", "cloud"]
 
     def complete(self, system: str, user: str) -> str:

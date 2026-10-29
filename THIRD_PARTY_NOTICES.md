@@ -24,8 +24,10 @@ CC-BY-4.0 requires the attribution above to travel with any copy of the model.
 
 | Model | Upstream | License | Attribution |
 |---|---|---|---|
-| `thonburian-whisper-th-medium` | biodatlab/whisper-th-medium-combined | Apache-2.0 | Thonburian Whisper, biodatlab (Mahidol University) |
-| `kb-whisper-large-sv` | KBLab/kb-whisper-large | Apache-2.0 | KB-Whisper, KBLab (National Library of Sweden) |
+| `whisper-large-v3-turbo-ct2` | deepdml/faster-whisper-large-v3-turbo-ct2 | MIT | Whisper large-v3 turbo, OpenAI; CTranslate2 conversion by deepdml |
+| `thonburian-whisper-th-medium-ct2` | kerlos127/whisper-th-medium-combined-ct2 | Apache-2.0 | Thonburian Whisper, biodatlab (Mahidol University); CTranslate2 conversion by kerlos127 |
+| `kb-whisper-large-sv-ct2` | KBLab/kb-whisper-large | Apache-2.0 | KB-Whisper, KBLab (National Library of Sweden) |
+| `qwen3-8b-q4km-gguf` | Qwen/Qwen3-8B-GGUF | Apache-2.0 | Qwen3-8B, Alibaba Qwen team |
 | `pyannote-diarization-3.1` | pyannote/speaker-diarization-3.1 | MIT | pyannote.audio speaker-diarization-3.1, Hervé Bredin / pyannoteAI |
 | `pyannote-segmentation-3.0` | pyannote/segmentation-3.0 | MIT | pyannote.audio segmentation-3.0, Hervé Bredin / pyannoteAI |
 | `wespeaker-voxceleb-resnet34-lm` | pyannote/wespeaker-voxceleb-resnet34-LM | CC-BY-4.0 | WeSpeaker ResNet34-LM trained on VoxCeleb, WeNet community; pyannote.audio wrapper by Hervé Bredin |
@@ -34,3 +36,7 @@ CC-BY-4.0 requires the attribution above to travel with any copy of the model.
 
 pyannote models are gated on Hugging Face: each user accepts their terms with their own account and passes
 a read token to `fetch_models.py` as `HF_TOKEN`.
+
+The Thai CTranslate2 model is a third-party conversion of biodatlab/whisper-th-medium-combined. Its
+`model.bin` has the same sha256 as an independent conversion (CodeHardThailand/whisper-th-medium-combined-ct2),
+which is the check that it is the unchanged upstream model.

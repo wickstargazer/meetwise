@@ -2,7 +2,7 @@
 
 A diarizer labels who-spoke-when with anonymous labels (`SPEAKER_00`, ...). Those labels are hints only: they
 never name anyone and never make anyone an action-item owner (`summary` enforces the owner rule). Naming a
-cluster is the user's job, through the 2-quote prompt , which is later work.
+cluster is the user's job, through a naming prompt, which is later work.
 
 Like VAD, diarization reads the enhanced signal when an `enhance` stage ran (stage 4), else raw-norm, and its
 spans index raw-norm. The diarizer is injected, so this module needs no model runtime.
