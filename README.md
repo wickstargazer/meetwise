@@ -35,4 +35,6 @@ uv run ruff check . && uv run lint-imports
 ```
 
 Tests use synthetic text-to-speech audio only (`say` on macOS, `espeak-ng` on Linux) and need `ffmpeg`.
-See `THIRD_PARTY_NOTICES.md` for model licences.
+## License
+
+Apache-2.0 (`LICENSE`). Models and vendored files keep their own licences: see `THIRD_PARTY_NOTICES.md`.

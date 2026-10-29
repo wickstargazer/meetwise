@@ -3,6 +3,8 @@ name = "meetwise"
 version = "0.0.1"
 description = "Offline meeting-audio pipeline: decode, quality gate, VAD, speaker hints, language routing, ASR with guards, cited summary."
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 requires-python = ">=3.12"
 dependencies = ["numpy>=2.0", "onnxruntime>=1.20"]
 
