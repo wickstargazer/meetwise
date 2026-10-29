@@ -92,9 +92,9 @@ def check(entry: ModelEntry, root: Path, *, full: bool = False) -> list[str]:
     return problems
 
 
-def model_dir(name: str, root: Path | None = None) -> Path:
-    """Directory of an installed model, or ModelMissing saying how to get it."""
-    entry = load_manifest()[name]
+def model_dir(name: str, root: Path | None = None, manifest: Path | None = None) -> Path:
+    """Directory of an installed model, or ModelMissing saying how to get it. `manifest`: another pack's."""
+    entry = (load_manifest(manifest) if manifest else load_manifest())[name]
     root = root or models_root()
     if problems := check(entry, root):
         raise ModelMissing(

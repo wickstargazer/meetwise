@@ -9,7 +9,20 @@ requires-python = ">=3.12"
 dependencies = ["numpy>=2.0", "onnxruntime>=1.20"]
 
 [project.optional-dependencies]
-# Model runners for Linux are added in the next step (faster-whisper, pyannote, llama.cpp).
+# The model runners (meetwise.runners and the CLI). For CUDA, install llama-cpp-python built with
+# CMAKE_ARGS="-DGGML_CUDA=on"; the default build runs the LLM on the CPU.
+runners = [
+    "faster-whisper>=1.1",
+    "llama-cpp-python>=0.3.8",
+    "pyannote-audio>=3.3,<4",
+    "pyyaml>=6",
+    "speechbrain>=1.0,<1.2",
+    "torch>=2.5,<2.9",
+    "torchaudio>=2.5,<2.9",
+]
+
+[project.scripts]
+meetwise = "meetwise.cli:main"
 
 [build-system]
 requires = ["hatchling>=1.25"]
