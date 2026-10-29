@@ -1,0 +1,4 @@
+sig_bak_ovr.onnx from microsoft/DNS-Challenge, DNSMOS/DNSMOS/, commit 82f1b17e7776a43eee395d0f45bae8abb700ad00.
+License: CC-BY-4.0 (LICENSE). Attribution: Reddy et al., "DNSMOS P.835", Microsoft.
+sha256 269fbebdb513aa23cddfbb593542ecc540284a91849ac50516870e1ac78f6edd
+Vendored so the quality probe runs offline.

@@ -1,0 +1,307 @@
+{
+ "schema": 1,
+ "note": "Downloaded models. Every file is pinned to an upstream commit and sha256. scripts/fetch_models.py downloads and verifies; meetwise.model_pack reads. The Linux runtime set (CTranslate2 whisper, GGUF summary model) is added with the Linux providers.",
+ "models": [
+  {
+   "name": "thonburian-whisper-th-medium",
+   "role": "asr",
+   "languages": [
+    "th"
+   ],
+   "stage": "7 ASR",
+   "repo": "biodatlab/whisper-th-medium-combined",
+   "license": "Apache-2.0",
+   "attribution": "Thonburian Whisper, biodatlab (Mahidol University)",
+   "source": "huggingface.co/biodatlab/whisper-th-medium-combined",
+   "revision": "eebf84255cc7f242a504f64ec09ec33d32903fe1",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 1292,
+     "sha256": "b74e5b83343f8e14c2f9010b00263d6300c3550c0c880a412b66ffe5da6b49c5",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/config.json"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 3750,
+     "sha256": "9ba91a67d4a86e2fe9e0965eb173a17822bb0bfbaf35e87567d509a39b3db2a7",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/generation_config.json"
+    },
+    {
+     "path": "preprocessor_config.json",
+     "size": 339,
+     "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/preprocessor_config.json"
+    },
+    {
+     "path": "added_tokens.json",
+     "size": 34604,
+     "sha256": "9715fd2243b6f06a5858b5e32950d2853f73dd5bc201aafcf76f5082a2d8acd1",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/added_tokens.json"
+    },
+    {
+     "path": "special_tokens_map.json",
+     "size": 2194,
+     "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/special_tokens_map.json"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 2481188,
+     "sha256": "a10d05b346bd872cbbdcb276355105de0787334deafa2c93c68d8d22c4d84bbf",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/tokenizer.json"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 282683,
+     "sha256": "2a4c4281cf9f51ac6ccc406fdc711a087afe6530f671fa7b80953edc498275ce",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/tokenizer_config.json"
+    },
+    {
+     "path": "vocab.json",
+     "size": 835550,
+     "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/vocab.json"
+    },
+    {
+     "path": "merges.txt",
+     "size": 493864,
+     "sha256": "78f27f801feb4283ae969d4cadacb28fc051b655647402b1a252c7079ea11c46",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/merges.txt"
+    },
+    {
+     "path": "normalizer.json",
+     "size": 52666,
+     "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/normalizer.json"
+    },
+    {
+     "path": "model.safetensors",
+     "size": 1634047376,
+     "sha256": "c683cd8930c6620212a5e6b03f17adbf52adf66d5cd1268f0dcbe468980e97b1",
+     "url": "https://huggingface.co/biodatlab/whisper-th-medium-combined/resolve/eebf84255cc7f242a504f64ec09ec33d32903fe1/model.safetensors"
+    }
+   ]
+  },
+  {
+   "name": "deepfilternet3-onnx",
+   "role": "enhance",
+   "languages": [],
+   "stage": "4 enhancement",
+   "repo": "Rikorose/DeepFilterNet",
+   "license": "MIT OR Apache-2.0",
+   "attribution": "DeepFilterNet3, Hendrik Schröter",
+   "source": "github.com/Rikorose/DeepFilterNet/models",
+   "revision": "84d57ec2c08fe08e68a13fb32a58cd7092060a0f",
+   "files": [
+    {
+     "path": "DeepFilterNet3_onnx.tar.gz",
+     "size": 7983136,
+     "sha256": "c94d91f70911001c946e0fabb4aa9adc37045f45a03b56008cb0c8244cb63616",
+     "url": "https://github.com/Rikorose/DeepFilterNet/raw/84d57ec2c08fe08e68a13fb32a58cd7092060a0f/models/DeepFilterNet3_onnx.tar.gz"
+    }
+   ]
+  },
+  {
+   "name": "pyannote-diarization-3.1",
+   "role": "diarization",
+   "languages": [
+    "any"
+   ],
+   "stage": "speaker hints",
+   "repo": "pyannote/speaker-diarization-3.1",
+   "license": "MIT",
+   "attribution": "pyannote.audio speaker-diarization-3.1, Hervé Bredin / pyannoteAI",
+   "source": "huggingface.co/pyannote/speaker-diarization-3.1",
+   "revision": "84fd25912480287da0247647c3d2b4853cb3ee5d",
+   "files": [
+    {
+     "path": "config.yaml",
+     "size": 469,
+     "sha256": "04ad9cd59a93c3a7c754200ecc9e1c4ba87bf1657ef8a4debf7555e711daeeda",
+     "url": "https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/84fd25912480287da0247647c3d2b4853cb3ee5d/config.yaml"
+    }
+   ]
+  },
+  {
+   "name": "pyannote-segmentation-3.0",
+   "role": "diarization",
+   "languages": [
+    "any"
+   ],
+   "stage": "speaker hints",
+   "repo": "pyannote/segmentation-3.0",
+   "license": "MIT",
+   "attribution": "pyannote.audio segmentation-3.0, Hervé Bredin / pyannoteAI",
+   "source": "huggingface.co/pyannote/segmentation-3.0",
+   "revision": "e66f3d3b9eb0873085418a7b813d3b369bf160bb",
+   "files": [
+    {
+     "path": "config.yaml",
+     "size": 399,
+     "sha256": "fa65a47a751602f04cc570135007d76859b69e8f9f1bfdf5878a5145980d4263",
+     "url": "https://huggingface.co/pyannote/segmentation-3.0/resolve/e66f3d3b9eb0873085418a7b813d3b369bf160bb/config.yaml"
+    },
+    {
+     "path": "LICENSE",
+     "size": 1061,
+     "sha256": "63a777ad4b3c7aed4b260b084d8fb49ec781c46c70c6b599ca5d2402ef7ebe50",
+     "url": "https://huggingface.co/pyannote/segmentation-3.0/resolve/e66f3d3b9eb0873085418a7b813d3b369bf160bb/LICENSE"
+    },
+    {
+     "path": "pytorch_model.bin",
+     "size": 5905440,
+     "sha256": "da85c29829d4002daedd676e012936488234d9255e65e86dfab9bec6b1729298",
+     "url": "https://huggingface.co/pyannote/segmentation-3.0/resolve/e66f3d3b9eb0873085418a7b813d3b369bf160bb/pytorch_model.bin"
+    }
+   ]
+  },
+  {
+   "name": "wespeaker-voxceleb-resnet34-lm",
+   "role": "diarization",
+   "languages": [
+    "any"
+   ],
+   "stage": "speaker hints",
+   "repo": "pyannote/wespeaker-voxceleb-resnet34-LM",
+   "license": "CC-BY-4.0",
+   "attribution": "WeSpeaker ResNet34-LM trained on VoxCeleb, WeNet community; pyannote.audio wrapper by Hervé Bredin",
+   "source": "huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM",
+   "revision": "837717ddb9ff5507820346191109dc79c958d614",
+   "files": [
+    {
+     "path": "config.yaml",
+     "size": 221,
+     "sha256": "6ff718cff3c5d7a4493537ab7f4780cad7e3d32453f59099b4076aefa07a9974",
+     "url": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/837717ddb9ff5507820346191109dc79c958d614/config.yaml"
+    },
+    {
+     "path": "pytorch_model.bin",
+     "size": 26645418,
+     "sha256": "366edf44f4c80889a3eb7a9d7bdf02c4aede3127f7dd15e274dcdb826b143c56",
+     "url": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin"
+    }
+   ]
+  },
+  {
+   "name": "voxlingua107-ecapa",
+   "role": "language-id",
+   "languages": [
+    "any"
+   ],
+   "stage": "language router",
+   "repo": "speechbrain/lang-id-voxlingua107-ecapa",
+   "license": "Apache-2.0",
+   "attribution": "VoxLingua107 ECAPA-TDNN language ID, SpeechBrain (Valk & Alumäe, 2021)",
+   "source": "huggingface.co/speechbrain/lang-id-voxlingua107-ecapa",
+   "revision": "0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9",
+   "files": [
+    {
+     "path": "hyperparams.yaml",
+     "size": 1519,
+     "sha256": "88fec9791a8416a152fb10834327e18d38e5bf7a351e9b714e08cdc4af05de6f",
+     "url": "https://huggingface.co/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/hyperparams.yaml"
+    },
+    {
+     "path": "label_encoder.txt",
+     "size": 2204,
+     "sha256": "9f566d83c4f19168be4a0bf86c0c7dac7d3264a95105bcbf33a7c32b83ccc17f",
+     "url": "https://huggingface.co/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/label_encoder.txt"
+    },
+    {
+     "path": "embedding_model.ckpt",
+     "size": 84474355,
+     "sha256": "ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a",
+     "url": "https://huggingface.co/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/embedding_model.ckpt"
+    },
+    {
+     "path": "classifier.ckpt",
+     "size": 762555,
+     "sha256": "a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc",
+     "url": "https://huggingface.co/speechbrain/lang-id-voxlingua107-ecapa/resolve/0253049ae131d6a4be1c4f0d8b0ff483a0f8c8e9/classifier.ckpt"
+    }
+   ]
+  },
+  {
+   "name": "kb-whisper-large-sv",
+   "role": "asr",
+   "languages": [
+    "sv"
+   ],
+   "stage": "7 ASR sv",
+   "repo": "KBLab/kb-whisper-large",
+   "license": "Apache-2.0",
+   "attribution": "KB-Whisper, KBLab (National Library of Sweden)",
+   "source": "huggingface.co/KBLab/kb-whisper-large",
+   "revision": "d5d5984b4d8f7c4847a8ea203f1976285fb28300",
+   "files": [
+    {
+     "path": "config.json",
+     "size": 3717,
+     "sha256": "48be972f94e790720e32b8711ad54860b1d06d5434079d3fcdfdfe1254d29c69",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/config.json"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 3849,
+     "sha256": "8cd1a9dbdf2fff6a1d538f289a1f9f322e50adc2f8a5b4b11586bfe097afb6f9",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/generation_config.json"
+    },
+    {
+     "path": "preprocessor_config.json",
+     "size": 340,
+     "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/preprocessor_config.json"
+    },
+    {
+     "path": "added_tokens.json",
+     "size": 34648,
+     "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/added_tokens.json"
+    },
+    {
+     "path": "special_tokens_map.json",
+     "size": 2186,
+     "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/special_tokens_map.json"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 3931383,
+     "sha256": "d06d0c877b5143ccdcb761407d5650b18a6afc33f9261fcb7e0dd44acbc1c262",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/tokenizer.json"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 282767,
+     "sha256": "a3df0b960492131e6f51c064a1c1d11ceab1c15e72aead1f6036e6cf9161b4d6",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/tokenizer_config.json"
+    },
+    {
+     "path": "vocab.json",
+     "size": 835528,
+     "sha256": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/vocab.json"
+    },
+    {
+     "path": "merges.txt",
+     "size": 493869,
+     "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/merges.txt"
+    },
+    {
+     "path": "normalizer.json",
+     "size": 52666,
+     "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/normalizer.json"
+    },
+    {
+     "path": "model.safetensors",
+     "size": 3219908024,
+     "sha256": "fa89eecf05f87f15cfd7213f9f55d6fdbbd1a59e6d152f58c4e87bcc482cde3f",
+     "url": "https://huggingface.co/KBLab/kb-whisper-large/resolve/d5d5984b4d8f7c4847a8ea203f1976285fb28300/model.safetensors"
+    }
+   ]
+  }
+ ]
+}

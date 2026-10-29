@@ -1,0 +1,20 @@
+{
+ "note": "Language router. A language without a route goes to the fallback with its language forced. Uncertain chunks go to the fallback with the language unset. Thresholds are starting values until calibrated on an evaluation set. Provider names are set with the Linux providers.",
+ "languages": [
+  "th",
+  "en",
+  "sv",
+  "hi",
+  "pa"
+ ],
+ "routes": {
+  "th": "thonburian-whisper-th-medium",
+  "en": "whisper-large-v3-turbo-mlx",
+  "sv": "kb-whisper-large-sv"
+ },
+ "fallback": "whisper-large-v3-turbo-mlx",
+ "min_prob": 0.6,
+ "min_margin": 0.2,
+ "min_seconds": 1.0,
+ "window_seconds": 3.0
+}
