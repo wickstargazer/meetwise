@@ -34,6 +34,50 @@ Every stage result is cached under the recording's sha256 in `$XDG_CACHE_HOME/me
 
 ## 2. Speech to text (stage 6)
 
+### What replaced a plain STT call
+
+There is no single speech-to-text service. A usual setup sends the whole file to one STT API and gets
+text back. meetwise replaces that with four local steps, with Whisper models doing the actual
+transcription:
+
+```
+ USUAL: one STT call
+   meeting.mp4 ──► cloud STT API ──► one block of text
+                   (audio leaves the machine; one model for all
+                    languages; no check on made-up text)
+
+ MEETWISE: STT split into local steps
+   meeting.mp4
+     ├─► 3 VAD          cut into speech chunks at silences
+     ├─► 5 language ID  which language is each chunk?
+     ├─► 6 ASR          the STT itself: the best Whisper model
+     │                  for that language, on this machine
+     └─► 6 guards       drop or flag made-up text
+                        (repeats, text over silence, low confidence)
+```
+
+| Usual STT | Replaced by |
+|---|---|
+| cloud STT API | Whisper models running locally through faster-whisper |
+| one model for every language | a model per language: Thonburian (th), KB-Whisper (sv), Whisper turbo (en and the rest) |
+| whole file in one go | VAD chunks, so a bad stretch spoils one chunk, not the rest |
+| trust whatever comes back | guards, plus a confidence score and word times on every chunk |
+| vendor's speaker labels | pyannote speaker hints (stage 4), kept separate from the text |
+
+The pipeline was first built on Apple silicon with mlx-whisper. For Linux, faster-whisper (CTranslate2)
+replaced mlx-whisper as the engine. The models are the same, converted to CTranslate2's format:
+
+```
+              Apple silicon         Linux (this repo)
+ engine       mlx-whisper      ──►  faster-whisper (CTranslate2)
+ hardware     Apple GPU        ──►  NVIDIA CUDA, or any CPU
+ precision    float16          ──►  int8 (float16 activations on GPU)
+ model files  HF / MLX         ──►  CTranslate2 model.bin
+ models       same three: Thonburian, KB-Whisper, Whisper turbo
+```
+
+### How a chunk is routed
+
 ```
  chunk ──► 5 language ID ──► router ──► 6 ASR model
                                           |
