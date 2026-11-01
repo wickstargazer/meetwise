@@ -1,6 +1,6 @@
 [project]
 name = "meetwise"
-version = "0.0.1"
+version = "0.1.0"
 description = "Offline meeting-audio pipeline: decode, quality gate, VAD, speaker hints, language routing, ASR with guards, cited summary."
 readme = "README.md"
 license = "Apache-2.0"
